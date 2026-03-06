@@ -1,0 +1,21 @@
+.top-menu-item-page-tree i::before {
+    content: "\f0e8";
+}
+
+.top-menu-item-contacts i::before {
+    content: "\f879";
+}
+
+.top-menu-item-handicap i::before {
+    content: "\e59d";
+}
+
+.top-menu-item-page-tree i::before,
+.top-menu-item-contacts i::before,
+.top-menu-item-handicap i::before {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 24px;
+}

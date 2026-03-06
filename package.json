@@ -1,0 +1,20 @@
+{
+  "name": "licejus",
+  "version": "1.0.0",
+  "description": "licejus",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "build:prod": "NODE_ENV=production node build.js",
+    "watch": "node build.js --watch",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "esbuild-sass-plugin": "^3.1.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}
