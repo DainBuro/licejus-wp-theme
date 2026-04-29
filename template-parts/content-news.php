@@ -20,9 +20,14 @@
             <?php endif; ?>
         </div>
 
-        <?php $address = get_post_meta(get_the_ID(), 'address', true); ?>
+        <?php
+        $address       = get_post_meta(get_the_ID(), 'address', true);
+        $address_color = get_post_meta(get_the_ID(), 'address_color', true) ?: 'yellow';
+        ?>
         <?php if ($address) : ?>
-            <span class="address"><?php echo esc_html($address); ?></span>
+            <span class="address address--<?php echo esc_attr($address_color); ?>">
+                <?php echo esc_html($address); ?>
+            </span>
         <?php endif; ?>
     </div>
 

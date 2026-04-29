@@ -1,0 +1,126 @@
+.home-events {
+    padding: 0 84px;
+    margin-top: 64px;
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    .events-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .event-row {
+        display: grid;
+        grid-template-columns: 84px 4fr 138px 138px;
+        gap: 24px;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(black, 0.08);
+
+        &:last-child {
+            border-bottom: 1px solid rgba(black, 0.08);
+        }
+    }
+
+    .event-date-short {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.1;
+        color: black;
+
+        .month {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .day {
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
+
+    .event-main {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .event-categories {
+            font-size: 13px;
+            color: rgba(black, 0.6);
+        }
+
+        .event-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: black;
+            line-height: 1.4;
+        }
+    }
+
+    .event-location {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 13px;
+        color: black;
+
+        .event-address-badge {
+            border-radius: 100px;
+            padding: 2px 10px;
+            font-size: 12px;
+            color: black;
+
+            &--yellow {
+                background-color: #f7d491;
+            }
+
+            &--green {
+                background-color: #78e0b7;
+            }
+
+            &--red {
+                background-color: #fe9b98;
+            }
+        }
+
+        .event-location-details {
+            line-height: 1.4;
+        }
+    }
+
+    .event-date-full {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        color: rgba(black, 0.6);
+        line-height: 1.5;
+
+        .full-date {
+            color: black;
+        }
+    }
+
+    .no-events {
+        color: rgba(black, 0.6);
+    }
+
+    @media (max-width: 900px) {
+        padding: 0 24px;
+
+        .event-row {
+            grid-template-columns: 64px 1fr;
+            gap: 12px;
+        }
+
+        .event-location,
+        .event-date-full {
+            grid-column: 2;
+        }
+    }
+}

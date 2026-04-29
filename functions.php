@@ -63,3 +63,5 @@ add_action('wp_enqueue_scripts', function () {
 require get_template_directory() . '/customizer.php';
 require get_template_directory() . '/inc/post-types.php';
 require get_template_directory() . '/inc/ajax-news-filter.php';
+require get_template_directory() . '/inc/events.php';
+require get_template_directory() . '/inc/lithuanian-date.php';

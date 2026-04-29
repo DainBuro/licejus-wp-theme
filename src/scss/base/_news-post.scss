@@ -70,9 +70,20 @@
         }
 
         .address {
-            background-color: rgba(247, 212, 145, 1);
             border-radius: 100px;
             padding: 0 8px;
+
+            &--yellow {
+                background-color: #f7d491;
+            }
+
+            &--green {
+                background-color: #78e0b7;
+            }
+
+            &--red {
+                background-color: #fe9b98;
+            }
         }
     }
 
