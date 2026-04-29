@@ -41,13 +41,25 @@ add_action('after_setup_theme', function () {
 
     register_nav_menus([
         'top-menu' => esc_html__('Top menu', 'ktu-licejus'),
+        'expandable-navigation-menu' => esc_html__('Navigation menu', 'ktu-licejus'),
     ]);
 });
 
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.min.css', [], THEME_VERSION);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap', [], null);
+
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.min.css', ['google-fonts'], THEME_VERSION);
 
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
+
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/main.min.js', [], THEME_VERSION, true);
+
+    wp_localize_script('main-script', 'licejusNews', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('licejus_news_filter'),
+    ]);
 });
 
 require get_template_directory() . '/customizer.php';
+require get_template_directory() . '/inc/post-types.php';
+require get_template_directory() . '/inc/ajax-news-filter.php';

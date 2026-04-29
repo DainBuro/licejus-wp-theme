@@ -1,0 +1,151 @@
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(15, 16, 26, 1);
+    color: #ffffff99;
+    font-size: 0.9rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+        padding: 48px 84px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+        .contacts-wrapper {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            gap: 2rem;
+
+            .left {
+                display: flex;
+                gap: 36px;
+                line-height: 1.6;
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .subdivisions-info {
+                display: flex;
+
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 14rem;
+                    line-height: 0.8;
+
+                    hr {
+                        height: 2px;
+                        width: 100%;
+                        border: none;
+                        margin: 1.5rem 0;
+                    }
+
+                    &:nth-of-type(1) hr {
+                        background-color: rgba(247, 212, 145, 1);
+                    }
+                    &:nth-of-type(2) hr {
+                        background-color: rgba(120, 224, 183, 1);
+                    }
+                    &:nth-of-type(3) hr {
+                        background-color: rgba(254, 155, 152, 1);
+                    }
+                }
+            }
+        }
+
+        .city-socials {
+            display: flex;
+            justify-content: space-between;
+
+            .founder-info {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                img {
+                    width: 34px;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 0.8;
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+
+                .social-links {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 8px;
+                }
+
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 255, 0.08);
+                    transition: background-color 0.15s;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.12);
+                    }
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .custom-logo {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    .legal-disclaimers {
+        display: flex;
+        justify-content: space-between;
+        padding: 48px 84px;
+
+        .left,
+        .right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right {
+            align-items: flex-end;
+        }
+    }
+}
