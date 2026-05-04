@@ -4,7 +4,7 @@
     <?php
     $events = new WP_Query([
         'post_type'      => 'event',
-        'posts_per_page' => 8,
+        'posts_per_page' => 4,
         'meta_key'       => 'event_datetime',
         'orderby'        => 'meta_value',
         'order'          => 'ASC',
