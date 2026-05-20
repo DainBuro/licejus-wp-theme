@@ -1,0 +1,49 @@
+.psychologists-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .psychologist-card {
+        border: 1px solid rgba(229, 218, 224, 1);
+        color: black;
+        font-size: 14px;
+        gap: 12px;
+        display: flex;
+
+        .left {
+            width: 60px;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 18px;
+                i {
+                    color: rgba(104, 37, 60, 1);
+                }
+            }
+            .profession {
+                font-weight: 400;
+                color: rgba(15, 16, 26, 0.6);
+            }
+            .location {
+                display: flex;
+                gap: 10px;
+
+                .room {
+                    font-weight: 600;
+                }
+            }
+            .highlight-undertext {
+                font-weight: 500;
+                color: rgba(104, 37, 60, 1);
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
     <div class="info-row">
         <div class="left">
 
-            <spam class="date"><?= esc_html($day_diff_text); ?></spam>
+            <span class="date"><?= esc_html($day_diff_text); ?></span>
             <?php if ($categories) : ?>
                 <div class="news-post-categories">
                     <?php foreach ($categories as $category) : ?>

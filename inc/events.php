@@ -119,9 +119,6 @@ add_action('save_post_event', function ($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return;
     }
-    if (!current_user_can('edit_post', $post_id)) {
-        return;
-    }
 
     $fields = [
         'event_datetime'         => 'sanitize_text_field',

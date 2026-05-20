@@ -42,6 +42,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'top-menu' => esc_html__('Top menu', 'ktu-licejus'),
         'expandable-navigation-menu' => esc_html__('Navigation menu', 'ktu-licejus'),
+        'portal-sidebar-paslaugos-menu' => esc_html__('Paslaugos menu', 'ktu-licejus'),
     ]);
 });
 
@@ -66,3 +67,4 @@ require get_template_directory() . '/inc/ajax-news-filter.php';
 require get_template_directory() . '/inc/events.php';
 require get_template_directory() . '/inc/lithuanian-date.php';
 require get_template_directory() . '/inc/partners.php';
+require get_template_directory() . '/inc/psychologists.php';

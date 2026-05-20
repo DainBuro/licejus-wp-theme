@@ -1,0 +1,65 @@
+.cards {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 16px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.24s ease;
+
+    &:hover {
+        background-color: rgba(104, 37, 60, 0.12);
+        transform: translateY(-4px);
+    }
+}
+
+.contact-card {
+    flex-direction: column;
+    height: 125px;
+    width: 250px;
+    padding-bottom: 16px;
+    background-color: rgba(104, 37, 60, 0.08);
+
+    svg {
+        padding: 6px;
+        color: rgba(104, 37, 60, 1);
+    }
+
+    span {
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+.content-block {
+    h2 {
+        margin-top: 0;
+    }
+
+    li {
+        line-height: 1.8;
+    }
+}
+
+.address {
+    border-radius: 100px;
+    padding: 0 8px;
+
+    &--yellow {
+        background-color: #f7d491;
+    }
+
+    &--green {
+        background-color: #78e0b7;
+    }
+
+    &--red {
+        background-color: #fe9b98;
+    }
+}

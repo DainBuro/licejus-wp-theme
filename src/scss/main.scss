@@ -1,9 +1,13 @@
 @use "base/normalize";
 @use "base/header";
 @use "base/footer";
+@use "base/generic";
 @use "base/news-post";
 @use "base/events";
 @use "base/partners";
+@use "base/portal";
+@use "base/sidebar";
+@use "base/psychologists";
 
 .site {
 }
